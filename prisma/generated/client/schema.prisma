@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "./generated/client"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Countries {
+  id                  String @id @default(auto()) @map("_id") @db.ObjectId
+  Country             Int
+  CountryName         String
+  PerformanceOriented Float
+  Autocratic          Float
+  Decisive            Float
+  Diplomatic          Float
+  FaceSaver           Float
+  DateAdded           String
+
+  @@map("countries") // collection name
+}

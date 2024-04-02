@@ -19,8 +19,8 @@ const start = async () => {
   await app.register(cors)
   await app.register(routes)
 
-  downloadAndConvertCsv()
-  populateDatabase()
+  // downloadAndConvertCsv()
+  // populateDatabase()
 
   const port = parseInt(process.env.PORT || "3333")
 

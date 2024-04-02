@@ -4,9 +4,11 @@ import { FastifyInstance } from "fastify"
 
 
 async function dbConnector(fastify: FastifyInstance) {
-  fastify.register(fastifyMongo, {
-    url: `${process.env.DATABASE_URL}`
-  })
+  if (process.env.DATABASE_URL) {
+    fastify.register(fastifyMongo, {
+      url: `${process.env.DATABASE_URL}`
+    })
+  }
 }
 
 export default fastifyPlugin(dbConnector)

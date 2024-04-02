@@ -20,7 +20,7 @@ const start = async () => {
   populateDatabase()
 
   try {
-    await app.listen({ port: 3333 }).then(() => {
+    app.listen({ port: 3333 }, () => {
       console.log("API running on port 3333")
     })
   } catch (error) {

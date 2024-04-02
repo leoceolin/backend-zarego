@@ -1,4 +1,4 @@
-import { FastifyRequest, FastifyReply } from "fastify"
+import { FastifyRequest, FastifyReply, } from "fastify"
 import { CountryService } from '../services/CountryService'
 import { Country } from "../types/type"
 

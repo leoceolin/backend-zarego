@@ -2,6 +2,10 @@ import { FastifyInstance, FastifyRequest, FastifyReply } from "fastify";
 import { CountryController } from "./controllers/CountryController";
 
 export async function routes(fastify: FastifyInstance) {
+  fastify.get('/test', async () => {
+    return { work: "Hello world" }
+  })
+
   fastify.get('/getCountryInformation', async (request: FastifyRequest, reply: FastifyReply) => {
     return new CountryController().handleListAllCountries(request, reply)
   })

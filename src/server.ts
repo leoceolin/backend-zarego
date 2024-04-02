@@ -1,8 +1,8 @@
 import Fastify from "fastify";
 import { routes } from "./routes";
 import cors from "@fastify/cors";
-// import { downloadAndConvertCsv } from "./downloadAndConvertCsv";
-// import { populateDatabase } from "./populateDatabase";
+import { downloadAndConvertCsv } from "./downloadAndConvertCsv";
+import { populateDatabase } from "./populateDatabase";
 // import dbConnector from './dbConnector'
 import { config } from 'dotenv'
 config({ path: '.env3' })
@@ -19,8 +19,8 @@ const start = async () => {
   await app.register(cors)
   await app.register(routes)
 
-  // downloadAndConvertCsv()
-  // populateDatabase()
+  downloadAndConvertCsv()
+  populateDatabase()
 
   const port = parseInt(process.env.PORT || "3333")
 

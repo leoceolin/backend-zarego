@@ -3,7 +3,8 @@ import { routes } from "./routes";
 import cors from "@fastify/cors";
 import { downloadAndConvertCsv } from "./downloadAndConvertCsv";
 import { populateDatabase } from "./populateDatabase";
-import 'dotenv/config'
+import { config } from 'dotenv'
+config({ path: '.env3' })
 
 const app = Fastify({ logger: true })
 

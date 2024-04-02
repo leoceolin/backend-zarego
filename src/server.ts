@@ -22,8 +22,10 @@ const start = async () => {
   downloadAndConvertCsv()
   populateDatabase()
 
+  const port = parseInt(process.env.PORT || "3333")
+
   try {
-    app.listen({ port: 3333, host: "0.0.0.0", }, () => {
+    app.listen({ port, host: "0.0.0.0", }, () => {
       console.log("API running on port 3333")
     })
   } catch (error) {

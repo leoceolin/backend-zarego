@@ -4,8 +4,10 @@
     "module": "commonjs",                                              
     "forceConsistentCasingInFileNames": true,            
     "strict": true,       
-    "outDir": "./dist",                    
+    "outDir": "./dist",
+    "esModuleInterop": true     
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "exclude": ["node_modules", "**/*.spec.ts"],
+ 
 }

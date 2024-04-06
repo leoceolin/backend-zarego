@@ -1,9 +1,9 @@
 import Fastify from "fastify";
 import { routes } from "./routes";
 import cors from "@fastify/cors";
-import { downloadAndConvertCsv } from "./downloadAndConvertCsv";
-import { populateDatabase } from "./populateDatabase";
-import dbConnector from './dbConnector'
+import { downloadAndConvertCsv } from "./utils/downloadAndConvertCsv";
+import { populateDatabase } from "./prisma/populateDatabase";
+import dbConnector from './prisma/dbConnector'
 import { config } from 'dotenv'
 config({ path: '.env3' })
 

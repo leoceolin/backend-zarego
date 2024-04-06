@@ -1,7 +1,7 @@
-import { DownloadCountrisCsv } from "./services/DownloadCsv";
+import { DownloadCountrisCsv } from "../services/DownloadCsv";
 import * as fs from 'fs';
-import { filename, filenameJSON } from "./utils/consts";
-import { CountryService } from "./services/CountryService";
+import { filename, filenameJSON } from "./consts";
+import { CountryService } from "../services/CountryService";
 let csvToJson = require('convert-csv-to-json');
 
 export async function downloadAndConvertCsv() {

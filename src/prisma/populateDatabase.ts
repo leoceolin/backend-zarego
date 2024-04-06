@@ -1,8 +1,8 @@
 
 import * as fs from 'fs';
-import { filenameJSON } from "./utils/consts";
-import { CountryService } from './services/CountryService';
-import { formatterDate } from './utils/dateFormatter';
+import { filenameJSON } from "../utils/consts";
+import { CountryService } from '../services/CountryService';
+import { formatterDate } from '../utils/dateFormatter';
 
 export async function populateDatabase() {
   const checkJSONExists = fs.existsSync(filenameJSON)

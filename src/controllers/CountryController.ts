@@ -29,7 +29,6 @@ class CountryController {
     if (!rows) {
       throw new Error('Missing rows query parameter')
     }
-    const listCountriesService = new CountryService()
     const countries = await this.countryService.getAllCountries(parseInt(page), parseInt(rows))
 
     reply.send(countries)
